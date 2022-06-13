@@ -45,8 +45,8 @@ public class PercentMovingStdevRuleThresholdsSpec extends AbstractRuleThresholds
 
     //TODO: !!!Add comments!!!
     /**
-     *
-     * @return
+     * Get high severity level object.
+     * @return high
      */
     @Override
     public PercentMovingStdevRuleParametersSpec getHigh() {
@@ -54,8 +54,8 @@ public class PercentMovingStdevRuleThresholdsSpec extends AbstractRuleThresholds
     }
 
     /**
-     *
-     * @return
+     * Get medium severity level object
+     * @return medium
      */
     @Override
     public PercentMovingStdevRuleParametersSpec getMedium() {
@@ -63,8 +63,8 @@ public class PercentMovingStdevRuleThresholdsSpec extends AbstractRuleThresholds
     }
 
     /**
-     *
-     * @return
+     * Get low severity level object
+     * @return low
      */
     @Override
     public PercentMovingStdevRuleParametersSpec getLow() {

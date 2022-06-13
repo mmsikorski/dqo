@@ -44,7 +44,7 @@ public class AllRulesThresholdsSpec extends AbstractRuleSetSpec {
         {
 			put("min_value", o -> o.minValue);
 			put("value_equals", o -> o.valueEquals);
-			put("percent_above_moving_average", o -> o.percentAboveMovingAverage);
+			put("percent_moving_average", o -> o.percentMovingAverage);
 			put("custom", o -> o.custom);
         }
     };
@@ -62,7 +62,7 @@ public class AllRulesThresholdsSpec extends AbstractRuleSetSpec {
     @JsonPropertyDescription("The current sensor reading is not more than X percent above the moving average of previous readings")
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @JsonSerialize(using = IgnoreEmptyYamlSerializer.class)
-    private PercentMovingAverageRuleThresholdsSpec percentAboveMovingAverage;
+    private PercentMovingAverageRuleThresholdsSpec percentMovingAverage;
 
     @JsonPropertyDescription("Dictionary of custom rules. Use a business friendly name as a key and configure a custom rule for each entry.")
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -109,18 +109,18 @@ public class AllRulesThresholdsSpec extends AbstractRuleSetSpec {
      * Returns a rule that the current sensor reading is not more than X percent above the moving average of previous readings
      * @return Percent above moving average rule.
      */
-    public PercentMovingAverageRuleThresholdsSpec getPercentAboveMovingAverage() {
-        return percentAboveMovingAverage;
+    public PercentMovingAverageRuleThresholdsSpec getPercentMovingAverage() {
+        return percentMovingAverage;
     }
 
     /**
      * Sets the rule that the value is not above the X percent of the moving average.
-     * @param percentAboveMovingAverage Rule thresholds.
+     * @param percentMovingAverage Rule thresholds.
      */
-    public void setPercentAboveMovingAverage(PercentMovingAverageRuleThresholdsSpec percentAboveMovingAverage) {
-		this.setDirtyIf(!Objects.equals(this.percentAboveMovingAverage, percentAboveMovingAverage));
-        this.percentAboveMovingAverage = percentAboveMovingAverage;
-		propagateHierarchyIdToField(percentAboveMovingAverage, "percent_above_moving_average");
+    public void setPercentAboveMovingAverage(PercentMovingAverageRuleThresholdsSpec percentMovingAverage) {
+		this.setDirtyIf(!Objects.equals(this.percentMovingAverage, percentMovingAverage));
+        this.percentMovingAverage = percentMovingAverage;
+		propagateHierarchyIdToField(percentMovingAverage, "percent_moving_average");
     }
 
     /**
